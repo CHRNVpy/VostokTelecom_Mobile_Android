@@ -81,6 +81,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 2
         versionName "0.0.2"
+        manifestPlaceholders = [onesignal_icon_prefix: "@mipmap/ic_launcher"]
     }
     signingConfigs {
         debug {

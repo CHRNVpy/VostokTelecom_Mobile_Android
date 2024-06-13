@@ -1,11 +1,27 @@
 import React, {useState, useRef, useEffect, useCallback} from 'react';
 import {View, Image, Text, Dimensions} from 'react-native';
-import {WebView} from 'react-native-webview';
+import {WebView, WebViewMessageEvent} from 'react-native-webview';
+import {LogLevel, OneSignal} from 'react-native-onesignal';
+
+OneSignal.initialize('07802ec1-70d7-40a2-a100-2c9aa05b1f1a');
+OneSignal.Notifications.requestPermission(true);
+
+interface MessageData {
+  type: string;
+  payload: any;
+}
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
   const webViewRef = useRef<WebView>(null);
+
+  const handleMessage = (event: WebViewMessageEvent) => {
+    const message: MessageData = JSON.parse(event.nativeEvent.data);
+
+    if (message.type == 'login') OneSignal.login(message.payload.userId);
+    if (message.type == 'logout') OneSignal.logout();
+  };
 
   const handleReload = useCallback(() => {
     if (!webViewRef.current) return;
@@ -41,6 +57,7 @@ const App = () => {
     <View style={{flex: 1}}>
       <WebView
         ref={webViewRef}
+        onMessage={handleMessage}
         onLoad={handleLoadEnd}
         onError={handleError}
         source={{uri: 'https://mobile.vt54.ru/'}}
