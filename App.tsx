@@ -1,7 +1,7 @@
 import React, {useState, useRef, useEffect, useCallback} from 'react';
-import {View, Image, Text, Dimensions} from 'react-native';
+import {View, Image, Dimensions} from 'react-native';
 import {WebView, WebViewMessageEvent} from 'react-native-webview';
-import {LogLevel, OneSignal} from 'react-native-onesignal';
+import {OneSignal} from 'react-native-onesignal';
 
 OneSignal.initialize('07802ec1-70d7-40a2-a100-2c9aa05b1f1a');
 OneSignal.Notifications.requestPermission(true);
@@ -19,8 +19,10 @@ const App = () => {
   const handleMessage = (event: WebViewMessageEvent) => {
     const message: MessageData = JSON.parse(event.nativeEvent.data);
 
-    if (message.type == 'login') OneSignal.login(message.payload.userId);
-    if (message.type == 'logout') OneSignal.logout();
+    if (message?.type == 'login' && !!message?.payload?.account)
+      OneSignal.login(message.payload.account);
+
+    if (message?.type == 'logout') OneSignal.logout();
   };
 
   const handleReload = useCallback(() => {
