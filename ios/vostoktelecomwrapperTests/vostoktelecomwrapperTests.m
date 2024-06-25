@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface vostoktelecomwrapperTests : XCTestCase
+@interface vostoktelecomreactnativeTests : XCTestCase
 
 @end
 
-@implementation vostoktelecomwrapperTests
+@implementation vostoktelecomreactnativeTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL (^)(UIView *view))test
 {

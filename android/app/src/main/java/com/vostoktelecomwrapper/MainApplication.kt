@@ -1,4 +1,4 @@
-package com.vostoktelecomwrapper
+package com.vostoktelecomreactnative
 
 import android.app.Application
 import com.facebook.react.PackageList

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "vostoktelecomwrapper.app"
-               BlueprintName = "vostoktelecomwrapper"
-               ReferencedContainer = "container:vostoktelecomwrapper.xcodeproj">
+               BuildableName = "vostoktelecomreactnative.app"
+               BlueprintName = "vostoktelecomreactnative"
+               ReferencedContainer = "container:vostoktelecomreactnative.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "vostoktelecomwrapperTests.xctest"
-               BlueprintName = "vostoktelecomwrapperTests"
-               ReferencedContainer = "container:vostoktelecomwrapper.xcodeproj">
+               BuildableName = "vostoktelecomreactnativeTests.xctest"
+               BlueprintName = "vostoktelecomreactnativeTests"
+               ReferencedContainer = "container:vostoktelecomreactnative.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "vostoktelecomwrapper.app"
-            BlueprintName = "vostoktelecomwrapper"
-            ReferencedContainer = "container:vostoktelecomwrapper.xcodeproj">
+            BuildableName = "vostoktelecomreactnative.app"
+            BlueprintName = "vostoktelecomreactnative"
+            ReferencedContainer = "container:vostoktelecomreactnative.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "vostoktelecomwrapper.app"
-            BlueprintName = "vostoktelecomwrapper"
-            ReferencedContainer = "container:vostoktelecomwrapper.xcodeproj">
+            BuildableName = "vostoktelecomreactnative.app"
+            BlueprintName = "vostoktelecomreactnative"
+            ReferencedContainer = "container:vostoktelecomreactnative.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
